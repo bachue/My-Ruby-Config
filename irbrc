@@ -11,7 +11,6 @@ Wirble.init
 Wirble.colorize
 Hirb::View.enable
 
-IRB.conf[:AUTO_INDENT]=true
 IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:SAVE_HISTORY] = 10000
 IRB.conf[:EVAL_HISTORY] = 2000
@@ -53,18 +52,4 @@ class Object
   end
   
   alias :to_pb :to_pboard
-end
-
-unless IRB.version.include?('DietRB')
-  IRB::Irb.class_eval do
-    def output_value
-      ap @context.last_value
-    end
-  end
-else # MacRuby
-  IRB.formatter = Class.new(IRB::Formatter) do
-    def inspect_object(object)
-      object.ai
-    end
-  end.new
 end
