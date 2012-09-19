@@ -9,7 +9,7 @@ require 'pasteboaRb'
 
 Wirble.init
 Wirble.colorize
-Hirb::View.enable
+Hirb::View.enable :resize => false
 
 IRB.conf[:AUTO_INDENT] = true
 IRB.conf[:SAVE_HISTORY] = 10000
