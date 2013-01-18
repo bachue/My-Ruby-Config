@@ -1,11 +1,11 @@
 source :rubygems
 
-gem 'map_by_method'
 gem 'awesome_print'
-gem 'wirble'
-gem 'hirb'
-gem 'pasteboaRb'
-gem 'what_methods'
 gem 'pry'
-gem 'pry-remote'
+gem 'pry-doc'
 gem 'pry-nav'
+gem 'pry-stack_explorer'
+
+if RUBY19 
+  gem 'jazz_hands'
+end
