@@ -4,7 +4,7 @@ group :development, :test do
   gem 'awesome_print'
   gem 'pry'
   gem 'pry-doc'
-  gem 'pry-nav'
+  gem 'pry-debugger'
   gem 'pry-stack_explorer'
   gem 'better_errors'
   gem 'binding_of_caller'
