@@ -1,9 +1,9 @@
-source :rubygems
+source 'https://rubygems.org'
 
 group :development, :test do
   gem 'awesome_print'
   gem 'pry'
   gem 'pry-doc'
-  gem 'pry-nav'
+  gem 'pry-nav' if RUBY_VERSION =~ /^1\.8/
   gem 'ruby-debug'
 end

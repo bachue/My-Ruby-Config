@@ -1,15 +1,11 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'awesome_print'
-gem 'pry'
-gem 'pry-doc'
-gem 'pry-stack_explorer'
-gem 'ruby-debug'
-
-if RUBY19 
-  gem 'jazz_hands'
-end
-
-if RUBY18
-  gem 'pry-nav'
+group :development, :test do
+  gem 'awesome_print'
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
+  gem 'ruby-debug'
+  gem 'jazz_hands' if RUBY_VERSION =~ /^1\.9/
+  gem 'pry-nav' if RUBY_VERSION =~ /^1\.8/
 end

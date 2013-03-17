@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 group :development, :test do
   gem 'awesome_print'
@@ -9,8 +9,5 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-
-  if RUBY19 
-    gem 'jazz_hands'
-  end
+  gem 'jazz_hands' if RUBY_VERSION =~ /^1\.9/
 end
