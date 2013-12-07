@@ -6,7 +6,7 @@ begin
   Pry.commands.alias_command 'ct', 'continue'
   Pry.commands.alias_command 'st', 'step'
   Pry.commands.alias_command 'nt', 'next'
-rescue LoadError
+rescue LoadError, RuntimeError
   # do nothing
 end
 
