@@ -48,14 +48,3 @@ if ENV.include?('RAILS_ENV') || defined?(Rails)
     end
   end
 end
-
-# Hack for Mozy Project
-if ENV.include?('RAILS_ENV') || defined?(Rails)
-  def new_userlist(range = 100)
-    (1..range).each {|i| puts "bachue#{i}@qq.com" unless ((users = User.find(:all, { :conditions => {:username => "bachue#{i}@qq.com"} })) && users.any?{|user| user.userhash.present? && user.exists?})}
-  end
-
-  def new_adminlist(range = 100)
-    (1..range).each {|i| puts "bachue#{i}@qq.com" unless ((admins = Admin.find(:all, { :conditions => {:username => "bachue#{i}@qq.com"} })) && admins.any?{|admin| !admin.deleted_at})}
-  end
-end
