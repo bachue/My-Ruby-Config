@@ -21,12 +21,4 @@ if ENV.include?('RAILS_ENV') || defined?(Rails) || ARGV.any? {|arg| arg =~ /conf
   if defined?(ActiveRecord::Base)
     ActiveRecord::Base.logger = Logger.new(STDOUT)
   end
-
-  if ENV['RAILS_ENV'] == 'test'
-    begin
-      #require 'test/test_helper'
-    rescue LoadError
-      # do nothing
-    end
-  end
 end
