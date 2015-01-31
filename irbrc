@@ -3,7 +3,7 @@ require 'irb/completion'
 
 begin
   require 'awesome_print'
-  def p(*args); ap *args; end
+  def p(*args); ap(*args); end
 rescue LoadError
   # do nothing
 end
