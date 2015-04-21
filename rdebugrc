@@ -1,5 +1,0 @@
-eval require 'debugger/completion'
-
-set autolist
-set listsize 20
-set forcestep
