@@ -1,3 +1,4 @@
 ---
 BUNDLE_JOBS: '8'
 BUNDLE_RETRY: '8'
+BUNDLE_MIRROR__HTTP://RUBY__TAOBAO__ORG/: https://ruby.taobao.org/
